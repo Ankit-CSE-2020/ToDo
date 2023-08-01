@@ -9,7 +9,7 @@ app.use(express.json())
 const todos=[];
 
 app.get('/',function(req,res){
-    res.sendFile(__dirname + "/public/index.html")
+    res.sendFile(__dirname + "/index.html")
 })
 
 app.get('/gettodo',function(req,res){
@@ -74,12 +74,12 @@ app.delete('/',function(req,res){
 })
 
 app.get('/styles.css',function(req,res){
-    res.sendFile(__dirname + "/public/styles.css")
+    res.sendFile(__dirname + "/styles.css")
 })
 
 
 app.get('/index.js',function(req,res){
-    res.sendFile(__dirname + "/public/index.js")
+    res.sendFile(__dirname + "/index.js")
 })
 
 
