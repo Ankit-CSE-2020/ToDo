@@ -113,7 +113,7 @@ function removeToDo(val) {
 
 
 function getToDos(){
-    fetch('/')
+    fetch('/gettodo')
     .then(function(res){
         if(res.status!==200){
              throw new Error('something wrong')
