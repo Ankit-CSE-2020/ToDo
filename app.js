@@ -12,7 +12,7 @@ app.get('/',function(req,res){
     res.sendFile(__dirname + "/index.html")
 })
 
-app.get('/gettodo',function(req,res){
+app.get('/',function(req,res){
 
     getToDos(function(error,todos){
          if (error) {
