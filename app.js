@@ -58,7 +58,7 @@ app.delete('/',function(req,res){
                     return todo.text!==todoVal.text;
                 })
 
-                fs.writeFile('todos.txt',JSON.stringify(filteredData),function(error){
+                fs.writeFile('todos.text',JSON.stringify(filteredData),function(error){
                     if (error) {
                         res.status(500);
                         res.json({error:error});
@@ -92,7 +92,7 @@ app.listen(3000,()=>{
 
 
 function getToDos(callback){
-    fs.readFile('todos.txt','utf-8',function(error,data){
+    fs.readFile('todos.text','utf-8',function(error,data){
         if (error) {
             callback(error);
         }
@@ -124,7 +124,7 @@ function saveToDos(todo,callback){
         else{
             todos.push(todo);
 
-            fs.writeFile('todos.txt',JSON.stringify(todos),function(error){
+            fs.writeFile('todos.text',JSON.stringify(todos),function(error){
                if(error){
                 callback(error);
                }
