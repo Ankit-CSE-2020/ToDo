@@ -58,7 +58,7 @@ app.delete('/',function(req,res){
                     return todo.text!==todoVal.text;
                 })
 
-                fs.writeFile('todos.mp4',JSON.stringify(filteredData),function(error){
+                fs.writeFile('todos.txt',JSON.stringify(filteredData),function(error){
                     if (error) {
                         res.status(500);
                         res.json({error:error});
@@ -124,7 +124,7 @@ function saveToDos(todo,callback){
         else{
             todos.push(todo);
 
-            fs.writeFile('todos.mp4',JSON.stringify(todos),function(error){
+            fs.writeFile('todos.txt',JSON.stringify(todos),function(error){
                if(error){
                 callback(error);
                }
